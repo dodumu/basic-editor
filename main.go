@@ -20,6 +20,10 @@ func main() {
 
 		switch command {
 		case "calc":
+			if len(split) != 4 {
+				fmt.Println("Not enough parameters to call the calc program")
+				continue
+			}
 			num1, err := strconv.ParseFloat(split[2], 64)
 			if err != nil {
 				fmt.Println("not a valid float number")
@@ -39,6 +43,7 @@ func main() {
 			input := split[2:]
 			w := strings.Join(input, " ")
 			Format(operation, w)
+
 		}
 	}
 }

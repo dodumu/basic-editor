@@ -40,10 +40,12 @@ func Format(operation string, every string) {
 			for i, j := 0, len(r)-1; i < j; i, j = i+1, j-1 {
 				r[i], r[j] = r[j], r[i]
 			}
-			word = string(r)
-			fmt.Println(word, " \n")
-		}
+			var abeg string
+			abeg += string(r)
 
+			fmt.Printf(abeg + " ")
+		}
+		fmt.Println()
 	}
 
 }
